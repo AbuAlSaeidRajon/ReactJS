@@ -19,6 +19,13 @@ const Demo = () => {
   );
 };
 
+/* const demo = (
+  <div>
+    <h1>Hello! My name is {name}</h1>
+    <p>I have {2024 - first_page} years of building websites experience.</p>
+  </div>
+  );*/
+
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Demo/>
