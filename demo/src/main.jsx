@@ -5,17 +5,17 @@ import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
 
-const Box = () => {
+const Box = (props) => {
   return (
     <div>
-      <p>Name:</p>
-      <p>Title:</p>
-      <p>Age:</p>
+      <p>Name: {props.name}</p>
+      <p>Title: {props.title}</p>
+      <p>Age: {props.age}</p>
     </div>
-  )
-}
+  );
+  };
 
-//JS bigins (Arrow function).............
+//JS begins (Arrow function).............
 const name = "Md Abu Al Saeid"
 const first_page = 2022;
 
@@ -25,11 +25,9 @@ const Demo = () => {
   <div>
     <h1>Hello! My name is {name}</h1>
     <p>I have {2024 - first_page} years of building websites experience.</p>
-    <Box />
-    <Box />
-    <Box />
-    <Box />
-    <Box />
+    <Box name="Md Abu Al Saeid" title="Student" age="25"/>
+    <Box name="Karin" title="Student" age="25"/>
+    <Box name="Jake" title="Student" age="25"/>
   </div>
   );
 };
