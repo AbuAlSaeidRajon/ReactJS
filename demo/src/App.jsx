@@ -1,29 +1,46 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import './App.css';
+import { useState } from 'react';
+import Header from './Header.jsx';
+import Footer from './Footer.jsx';
+import Form from './Form.jsx';
+import View from './View.jsx';
 
 function App() {
-  const [count, setCount] = useState(0)
+  /*   const [counter, setCounter] = useState(1000);
+  const [persons, setPersons] = useState([
+    { id: 1, name: 'Margit', title: 'CTO', location: 'Helsinki' },
+    { id: 2, name: 'Karin', title: 'designer', location: 'Tartu' },
+    { id: 3, name: 'Kati', title: 'developer', location: 'Far away' },
+  ]); */
+  /*   const [inputValue, setInputValue] = useState(''); */
+  const [formData, setFormData] = useState({});
 
+  /*   const changeHandler = (event) => {
+    setInputValue(event.target.value);
+  }; */
+
+  const changeFormHandler = (event) => {
+    const { name, value } = event.target;
+
+    setFormData((prevState) => ({ ...prevState, [name]: value }));
+    console.log(formData);
+  };
+
+  /*  const clickIncHandler = () => {
+    setCounter(counter + 1);
+  };
+  const clickDecHandler = () => {
+    setCounter(counter - 1);
+  }; 
+ */
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-         
-        </a>
-        <a href="https://react.dev" target="_blank">
-          
-        </a>
-      </div>
-      <h1>Hello World! It's Saeid</h1>
-      <div className="card">
-        
-       
-      </div>
-      
+      <Header />
+      <Form changeHandler={changeFormHandler} />
+      <View {...formData} />
+      <Footer />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
