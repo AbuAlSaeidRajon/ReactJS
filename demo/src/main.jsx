@@ -1,6 +1,6 @@
+// first two lines are always import files 
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-// first two lines are always import files 
 
 import App from './App.jsx'
 import './index.css'
@@ -21,7 +21,7 @@ const first_page = 2022;
 
 const Demo = () => {
   return (
-  // capital D means we are creating components not variables
+  // capital D means we are creating components not variables.....
   <div>
     <h1>Hello! My name is {name}</h1>
     <p>I have {2024 - first_page} years of building websites experience.</p>
@@ -40,6 +40,7 @@ const Demo = () => {
   ); */
 
 ReactDOM.createRoot(document.getElementById('root')).render(
+  // getElementById and render means single page application.........
   <React.StrictMode>
     <Demo/>
   </React.StrictMode>
